@@ -5,7 +5,7 @@ Linux bbrplus kernel 5.4 simply ported from bbrplus 4.14
 <br/>
 <br/>
 
-***original version***  
+***original 4.14 version***  
 https://github.com/cx9208/bbrplus
 
 <br/>
