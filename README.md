@@ -30,7 +30,7 @@ https://github.com/cx9208/bbrplus
 <br/>
 <br/>
 
-### 3) extract the tarball
+### 3) extract the tarball & cd extracted directory
         tar zxvf linux-5.4.68.tar.gz && cd linux-5.4.68
 
 <br/>
