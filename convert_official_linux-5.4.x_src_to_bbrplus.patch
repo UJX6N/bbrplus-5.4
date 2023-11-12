@@ -15,7 +15,7 @@ diff -ruaN a/include/net/inet_connection_sock.h b/include/net/inet_connection_so
 diff -ruaN a/include/net/tcp.h b/include/net/tcp.h
 --- a/include/net/tcp.h	2022-11-11 00:57:58.000000000 +0800
 +++ b/include/net/tcp.h	2022-11-13 11:41:21.804186916 +0800
-@@ -565,6 +565,8 @@
+@@ -570,6 +570,8 @@
  #endif
  /* tcp_output.c */
  
@@ -24,7 +24,7 @@ diff -ruaN a/include/net/tcp.h b/include/net/tcp.h
  void __tcp_push_pending_frames(struct sock *sk, unsigned int cur_mss,
  			       int nonagle);
  int __tcp_retransmit_skb(struct sock *sk, struct sk_buff *skb, int segs);
-@@ -1065,6 +1067,8 @@
+@@ -1070,6 +1072,8 @@
  	void (*pkts_acked)(struct sock *sk, const struct ack_sample *sample);
  	/* override sysctl_tcp_min_tso_segs */
  	u32 (*min_tso_segs)(struct sock *sk);
@@ -1290,7 +1290,7 @@ diff -ruaN a/net/ipv4/tcp_bbrplus.c b/net/ipv4/tcp_bbrplus.c
 diff -ruaN a/net/ipv4/tcp_output.c b/net/ipv4/tcp_output.c
 --- a/net/ipv4/tcp_output.c	2022-11-11 00:57:58.000000000 +0800
 +++ b/net/ipv4/tcp_output.c	2022-11-13 11:41:21.808186939 +0800
-@@ -1737,7 +1737,7 @@
+@@ -1736,7 +1736,7 @@
  /* Return how many segs we'd like on a TSO packet,
   * to send one TSO packet per ms
   */
@@ -1299,7 +1299,7 @@ diff -ruaN a/net/ipv4/tcp_output.c b/net/ipv4/tcp_output.c
  			    int min_tso_segs)
  {
  	u32 bytes, segs;
-@@ -1755,6 +1755,7 @@
+@@ -1754,6 +1754,7 @@
  
  	return segs;
  }
